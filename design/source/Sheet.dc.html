@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Character Sheet — Caldor Miles</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#0B0F17}
+*{box-sizing:border-box}
+a{color:#5CCFC1}a:hover{color:#8FE3D8}
+.btn-p:hover:not(:disabled){background:#6FD8CB !important}
+.btn-s:hover:not(:disabled){border-color:#C9A45C !important;color:#F1E3BF !important}
+.icon-b:hover:not(:disabled){background:#1F2B45 !important;border-color:#4FC1B5 !important;color:#8FE3D8 !important}
+.nav:hover{color:#E7E4DC !important}
+.attr:hover{background:#151F33 !important}
+:focus-visible{outline:2px solid #5CCFC1;outline-offset:2px}
+input:focus{border-color:#4FC1B5 !important;box-shadow:0 0 0 3px rgba(79,193,181,.2) !important;outline:none}
+input:hover{border-color:#4A5A7E}
+button:disabled{cursor:not-allowed}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #0B0F17; color: #E7E4DC; font-family: Inter, system-ui, sans-serif; font-size: 15px; line-height: 1.5">
+
+<header style="background: #0E1422; border-bottom: 1px solid rgba(201,164,92,.28)">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 24px; min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #E7E4DC">
+<svg width="30" height="34" viewBox="0 0 30 34" aria-hidden="true"><path d="M15 1 L28 6 V17 C28 25 22 30 15 33 C8 30 2 25 2 17 V6 Z" fill="#121A2B" stroke="#C9A45C" stroke-width="1.4"/><path d="M15 8 V26 M10 13 L15 8 L20 13 M10 20 H20" stroke="#5CCFC1" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
+<span style="display: flex; flex-direction: column; line-height: 1.1"><span style="font-family: Cinzel, serif; font-weight: 700; font-size: 16px; letter-spacing: .14em; color: #E2C98E">ARCANE KNIGHT</span><span style="font-size: 12px; color: #A2ABBD; letter-spacing: .04em">Character Creator</span></span>
+</a>
+<nav aria-label="Primary" style="display: flex; gap: 4px; flex-wrap: wrap; flex: 1 1 auto">
+<a href="Main.dc.html" aria-current="page" style="padding: 20px 12px 18px; color: #E7E4DC; text-decoration: none; font-weight: 600; font-size: 14px; border-bottom: 2px solid #4FC1B5">Library</a>
+<a class="nav" href="Create.dc.html" style="padding: 20px 12px 18px; color: #A2ABBD; text-decoration: none; font-weight: 500; font-size: 14px; border-bottom: 2px solid transparent">New Character</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #A2ABBD">
+<span style="width: 34px; height: 34px; border-radius: 50%; background: #172137; border: 1px solid #33415F; display: grid; place-items: center; font-weight: 600; color: #E2C98E">TM</span>
+<span>Author workspace</span>
+</div>
+</div>
+<svg width="100%" height="8" aria-hidden="true" style="display: block"><defs><pattern id="runeC" width="28" height="8" patternUnits="userSpaceOnUse"><path d="M3 7 L7 1 L11 7 M16 1 V7 M16 4 H22 M25 1 L25 7" stroke="#C9A45C" stroke-width=".8" fill="none"/></pattern></defs><rect width="100%" height="8" fill="url(#runeC)" opacity=".22"/></svg>
+</header>
+
+<main style="max-width: 1240px; margin: 0 auto; padding: 24px 24px 56px; display: flex; flex-direction: column; gap: 20px">
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; font-size: 13px">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 8px; color: #8590A6"><a href="Main.dc.html" style="text-decoration: none">Library</a><span aria-hidden="true">/</span><span aria-current="page" style="color: #C9CFDB">Caldor Miles</span></nav>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; color: #A2ABBD">
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 18px; height: 18px; border-radius: 4px; background: #0C1220; border: 1px solid #4A5A7E"></span>Editable</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 18px; height: 18px; border-radius: 4px; border: 1px solid rgba(79,193,181,.4); color: #8FE3D8; display: grid; place-items: center; font-family: Georgia, serif; font-style: italic; font-size: 12px">ƒ</span>Calculated</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; color: #8FE3D8"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 7.5 L5.5 10.5 L11.5 3.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>All changes saved</span>
+</div>
+</div>
+
+<!-- 1 · Identity -->
+<section aria-label="Identity" style="position: relative; overflow: hidden; background: #121A2B; border: 1px solid #8C7442; border-radius: 12px; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px; box-shadow: 0 0 0 1px rgba(201,164,92,.12), 0 0 48px rgba(79,193,181,.05)">
+<span style="width: 72px; height: 72px; flex: none; border-radius: 12px; background: #0E1422; border: 1px solid #C9A45C; display: grid; place-items: center; font-family: Cinzel, serif; font-weight: 700; font-size: 26px; color: #E2C98E; box-shadow: inset 0 0 22px rgba(79,193,181,.16)">CM</span>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<h1 style="margin: 0; font-family: Cinzel, serif; font-weight: 600; font-size: 34px; line-height: 1.1; color: #F2EFE8; overflow-wrap: anywhere">Caldor Miles</h1>
+<dl style="margin: 0; display: flex; flex-wrap: wrap; gap: 6px 28px; font-size: 15px">
+<div style="display: flex; gap: 8px; align-items: baseline; min-width: 0"><dt style="font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #8590A6">Classification</dt><dd style="margin: 0; color: #5CCFC1; font-weight: 600; overflow-wrap: anywhere">Arcane Knight</dd></div>
+<div style="display: flex; gap: 8px; align-items: baseline; min-width: 0"><dt style="font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #8590A6">Species</dt><dd style="margin: 0; color: #E7E4DC; font-weight: 500; overflow-wrap: anywhere">Human</dd></div>
+</dl>
+</div>
+<button type="button" class="btn-s" style="min-height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1px solid #33415F; border-radius: 8px; color: #C9CFDB; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">
+<svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true"><path d="M10 2 L13 5 L5 13 H2 V10 Z" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linejoin="round"/></svg>Edit identity</button>
+<nav aria-label="Character views" style="flex: 1 1 100%; display: flex; gap: 4px; margin: 0 -8px -20px; padding-top: 4px; border-top: 1px solid #24304A">
+<a href="Sheet.dc.html" aria-current="page" style="padding: 10px 14px; font-weight: 600; font-size: 14px; color: #E7E4DC; text-decoration: none; border-bottom: 2px solid #4FC1B5">Character Sheet</a>
+<a class="nav" href="Equipment.dc.html" style="padding: 10px 14px; font-weight: 500; font-size: 14px; color: #A2ABBD; text-decoration: none; border-bottom: 2px solid transparent; display: inline-flex; align-items: center; gap: 8px">Equipment<span style="font-size: 12px; font-weight: 600; color: #E2C98E; padding: 0 7px; border: 1px solid #8C7442; border-radius: 999px">10 / 18</span></a>
+</nav>
+</section>
+
+<!-- 2 · Level, Essence, Reputation -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+<section aria-labelledby="t-level" style="background: #121A2B; border: 1px solid #24304A; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 id="t-level" style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #C9A45C">Level</h2><span style="font-size: 12px; color: #8590A6">Next: Level 6</span></div>
+<div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap">
+<span style="font-family: Cinzel, serif; font-weight: 700; font-size: 44px; line-height: 1; color: #F2EFE8">5</span>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><span style="font-size: 13px; color: #8590A6">Essence to reach Level 6</span><span style="font-size: 18px; font-weight: 700; color: #E7E4DC; font-variant-numeric: tabular-nums">5,400</span></span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap">
+<span style="font-size: 12px; color: #8590A6; padding: 3px 8px; border: 1px dashed #33415F; border-radius: 6px">Progression curve · to be defined</span>
+<button type="button" class="btn-s" style="min-height: 36px; padding: 0 12px; background: #172137; border: 1px solid #8C7442; border-radius: 8px; color: #E2C98E; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Advance to Level 6</button>
+</div>
+</section>
+
+<section aria-labelledby="t-ess" style="background: #121A2B; border: 1px solid #24304A; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 id="t-ess" style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #C9A45C">Available Essence</h2><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1 L12 8 L8 15 L4 8 Z" stroke="#C9A45C" stroke-width="1.2" fill="rgba(201,164,92,.15)"/></svg></div>
+<label for="essence" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Available Essence</label>
+<input id="essence" inputmode="numeric" value="{{essenceStr}}" readonly="" style="height: 52px; padding: 0 14px; background: #0C1220; border: 1px solid #33415F; border-radius: 8px; color: #F2EFE8; font: inherit; font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; width: 100%">
+<span style="font-size: 13px; color: #8590A6">Spent on levels and on attribute points (100 each).</span>
+</section>
+
+<section aria-labelledby="t-rep" style="background: #121A2B; border: 1px solid #24304A; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 id="t-rep" style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #C9A45C">Reputation</h2><span style="font-size: 12px; color: #8590A6">6% toward Rank 3</span></div>
+<div style="display: flex; align-items: baseline; gap: 10px"><span style="font-size: 15px; color: #A2ABBD">Rank</span><span style="font-family: Cinzel, serif; font-weight: 700; font-size: 44px; line-height: 1; color: #F2EFE8">2</span><span style="font-size: 18px; font-weight: 700; color: #E2C98E; margin-left: auto; font-variant-numeric: tabular-nums">6%</span></div>
+<div role="meter" aria-label="Reputation progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="6" style="height: 8px; border-radius: 4px; background: #24304A; overflow: hidden"><div style="width: 6%; height: 100%; background: #C9A45C"></div></div>
+<span style="font-size: 12px; color: #8590A6; padding: 3px 8px; border: 1px dashed #33415F; border-radius: 6px; align-self: flex-start">Rank mechanics · to be defined</span>
+</section>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+
+<!-- 3 & 4 · Resources + regeneration -->
+<section aria-labelledby="t-res" style="flex: 1 1 520px; min-width: 0; background: #121A2B; border: 1px solid #24304A; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
+<h2 id="t-res" style="margin: 0; font-family: Cinzel, serif; font-weight: 600; font-size: 20px; color: #F2EFE8">Resources</h2>
+<button type="button" class="btn-s" onClick="{{restore}}" style="min-height: 36px; padding: 0 12px; background: transparent; border: 1px solid #33415F; border-radius: 8px; color: #C9CFDB; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Restore all to max</button>
+</div>
+<sc-for list="{{res}}" as="r" hint-placeholder-count="3">
+<div style="display: flex; flex-direction: column; gap: 8px; padding-bottom: 16px; border-bottom: 1px solid #1E2840">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
+<span style="display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; color: #F2EFE8">
+<span style="width: 28px; height: 28px; border-radius: 6px; background: {{r.tint}}; color: {{r.color}}; display: grid; place-items: center"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="{{r.icon}}" fill="currentColor"/></svg></span>{{r.name}}</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; font-variant-numeric: tabular-nums">
+<label for="{{r.id}}" style="font-size: 12px; color: #8590A6">Current</label>
+<input id="{{r.id}}" inputmode="numeric" value="{{r.cur}}" onChange="{{r.onCur}}" style="width: 76px; height: 36px; padding: 0 10px; text-align: right; background: #0C1220; border: 1px solid #33415F; border-radius: 6px; color: #F2EFE8; font: inherit; font-size: 16px; font-weight: 700">
+<span style="color: #8590A6; font-size: 16px">/</span>
+<span style="font-size: 16px; font-weight: 700; color: #C9CFDB" title="Calculated: {{r.maxFormula}}">{{r.max}}</span>
+<span style="font-size: 12px; color: #8590A6">max</span>
+</span>
+</div>
+<div role="meter" aria-label="{{r.name}} {{r.cur}} of {{r.max}}" aria-valuemin="0" aria-valuemax="{{r.max}}" aria-valuenow="{{r.cur}}" style="height: 14px; border-radius: 7px; background: {{r.track}}; overflow: hidden; border: 1px solid rgba(255,255,255,.04)">
+<div style="width: {{r.pct}}; height: 100%; background: {{r.color}}; border-radius: 7px; box-shadow: 0 0 10px {{r.tint}}"></div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 13px">
+<span style="color: #8590A6"><span style="font-family: Georgia, serif; font-style: italic; color: #8FE3D8">ƒ</span> Max = {{r.maxFormula}}</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="color: #8590A6">Regeneration</span><span style="font-weight: 700; color: #8FE3D8; font-size: 15px; font-variant-numeric: tabular-nums">+{{r.regen}} / min</span><span style="color: #8590A6">({{r.regenFormula}})</span></span>
+</div>
+</div>
+</sc-for>
+</section>
+
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<!-- 5 · Attributes -->
+<section aria-labelledby="t-attr" style="background: #121A2B; border: 1px solid #24304A; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
+<h2 id="t-attr" style="margin: 0; font-family: Cinzel, serif; font-weight: 600; font-size: 20px; color: #F2EFE8">Attributes</h2>
+<span style="font-size: 13px; color: #A2ABBD">Unspent points <strong style="margin-left: 4px; padding: 2px 10px; border-radius: 999px; background: {{unspentBg}}; color: {{unspentFg}}; font-variant-numeric: tabular-nums">{{unspent}}</strong></span>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+<sc-for list="{{attrs}}" as="a" hint-placeholder-count="6">
+<li class="attr" style="display: flex; align-items: center; gap: 14px; padding: 10px 8px; border-bottom: 1px solid #1E2840; border-radius: 6px">
+<span style="width: 44px; flex: none; font-size: 11px; font-weight: 700; letter-spacing: .1em; color: #C9A45C">{{a.abbr}}</span>
+<span style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; line-height: 1.3"><span style="font-weight: 600; color: #E7E4DC">{{a.name}}</span><span style="font-size: 12px; color: #8590A6">{{a.effect}}</span></span>
+<span style="display: flex; flex-direction: column; align-items: flex-end; line-height: 1.15; min-width: 64px"><span style="font-size: 24px; font-weight: 700; color: #F2EFE8; font-variant-numeric: tabular-nums">{{a.value}}</span><span style="font-size: 11px; color: #8590A6; font-variant-numeric: tabular-nums; white-space: nowrap">{{a.base}} <span style="color: {{a.gearFg}}">{{a.gear}}</span></span></span>
+<button type="button" class="icon-b" aria-label="Allocate 1 point to {{a.name}}" disabled="{{noUnspent}}" onClick="{{a.add}}" style="width: 36px; height: 36px; flex: none; display: grid; place-items: center; border-radius: 8px; background: {{addBg}}; border: 1px solid {{addBorder}}; color: {{addFg}}; cursor: pointer"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 2 V12 M2 7 H12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+</li>
+</sc-for>
+</ul>
+</section>
+
+<!-- 6 · Allocation & purchase -->
+<section aria-labelledby="t-buy" style="background: #121A2B; border: 1px solid #24304A; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px">
+<h2 id="t-buy" style="margin: 0; font-family: Cinzel, serif; font-weight: 600; font-size: 18px; color: #F2EFE8">Attribute Points</h2>
+<p style="margin: 0; font-size: 13px; color: #A2ABBD">Each level from Level 2 grants 2 points. Additional points cost 100 Essence each. Use <strong style="color: #E7E4DC">+</strong> beside an attribute to allocate.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px; padding: 14px; background: #0E1422; border: 1px solid #24304A; border-radius: 10px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="qty" style="font-size: 12px; font-weight: 600; color: #C9CFDB">Points to purchase</label>
+<div style="display: inline-flex; align-items: center; border: 1px solid #33415F; border-radius: 8px; overflow: hidden">
+<button type="button" class="icon-b" aria-label="Decrease" onClick="{{dec}}" disabled="{{qtyMin}}" style="width: 44px; height: 44px; display: grid; place-items: center; background: #172137; border: 0; color: #C9CFDB; cursor: pointer"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7 H12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+<input id="qty" inputmode="numeric" value="{{qty}}" readonly="" style="width: 56px; height: 44px; text-align: center; background: #0C1220; border: 0; border-left: 1px solid #33415F; border-right: 1px solid #33415F; color: #F2EFE8; font: inherit; font-size: 18px; font-weight: 700">
+<button type="button" class="icon-b" aria-label="Increase" onClick="{{inc}}" style="width: 44px; height: 44px; display: grid; place-items: center; background: #172137; border: 0; color: #C9CFDB; cursor: pointer"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 2 V12 M2 7 H12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+</div>
+</div>
+<dl style="margin: 0; display: flex; gap: 20px; flex: 1 1 160px; font-variant-numeric: tabular-nums">
+<div><dt style="font-size: 12px; color: #8590A6">Cost</dt><dd style="margin: 0; font-weight: 700; color: #E2C98E">{{costStr}} Essence</dd></div>
+<div><dt style="font-size: 12px; color: #8590A6">Balance after</dt><dd style="margin: 0; font-weight: 700; color: #E7E4DC">{{afterStr}}</dd></div>
+</dl>
+<button type="button" class="btn-p" onClick="{{buy}}" style="min-height: 44px; padding: 0 18px; background: #4FC1B5; border: 0; border-radius: 8px; color: #06201D; font: inherit; font-weight: 700; font-size: 14px; cursor: pointer">Purchase {{qty}} {{ptWord}}</button>
+</div>
+<sc-if value="{{noUnspent}}" hint-placeholder-val="{{ true }}"><span style="font-size: 12px; color: #8590A6">Allocation buttons are disabled until unspent points are available.</span></sc-if>
+</section>
+</div>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1320}}'>
+class Component extends DCLogic {
+  constructor(p) {
+    super(p);
+    this.state = { cur: { h: 430, m: 370, s: 295 }, v: { CON: 43, INT: 37, END: 31, COR: 21, CNC: 28, STR: 44 }, unspent: 0, essence: 93001, qty: 3 };
+  }
+  renderVals() {
+    const s = this.state, v = s.v, fmt = n => n.toLocaleString('en-US');
+    const ICON = {
+      h: 'M8 14 C3 10.5 1.5 8 1.5 5.5 C1.5 3.5 3 2 5 2 C6.3 2 7.4 2.7 8 3.7 C8.6 2.7 9.7 2 11 2 C13 2 14.5 3.5 14.5 5.5 C14.5 8 13 10.5 8 14 Z',
+      m: 'M8 1 C8 1 3 7 3 10 C3 12.8 5.2 15 8 15 C10.8 15 13 12.8 13 10 C13 7 8 1 8 1 Z',
+      s: 'M9.5 1 L3 9 H7.5 L6.5 15 L13 7 H8.5 Z'
+    };
+    const defs = [
+      { k: 'h', name: 'Health', color: '#E0525A', tint: 'rgba(224,82,90,.18)', track: 'rgba(224,82,90,.12)', max: v.CON * 10, maxFormula: 'Constitution ' + v.CON + ' × 10', regen: v.CON, regenFormula: 'Constitution' },
+      { k: 'm', name: 'Mana', color: '#4C8EF0', tint: 'rgba(76,142,240,.2)', track: 'rgba(76,142,240,.12)', max: v.INT * 10, maxFormula: 'Intellect ' + v.INT + ' × 10', regen: v.INT + v.CNC, regenFormula: 'Intellect + Concentration' },
+      { k: 's', name: 'Stamina', color: '#E9A23B', tint: 'rgba(233,162,59,.2)', track: 'rgba(233,162,59,.12)', max: v.END * 10, maxFormula: 'Endurance ' + v.END + ' × 10', regen: v.END, regenFormula: 'Endurance' }
+    ];
+    const res = defs.map(d => {
+      const cur = Math.min(s.cur[d.k], d.max);
+      return { ...d, id: 'cur-' + d.k, icon: ICON[d.k], cur, max: fmt(d.max), pct: (d.max ? Math.max(0, cur / d.max * 100) : 0).toFixed(1) + '%',
+        onCur: e => { const n = parseInt(e.target.value.replace(/\D/g, ''), 10) || 0; this.setState({ cur: { ...s.cur, [d.k]: n } }); } };
+    });
+    const meta = [
+      ['CON', 'Constitution', 'Max Health ×10 · Health regen'],
+      ['INT', 'Intellect', 'Max Mana ×10 · Mana regen'],
+      ['END', 'Endurance', 'Max Stamina ×10 · Stamina regen'],
+      ['COR', 'Core', 'Story-driven'],
+      ['CNC', 'Concentration', 'Adds to Mana regen'],
+      ['STR', 'Strength', 'Story-driven']
+    ];
+    const noUnspent = s.unspent <= 0;
+    const GEAR = { CON: 4, INT: 4, END: 2, COR: 1, CNC: 3, STR: 5 };
+    const attrs = meta.map(m => ({ abbr: m[0], name: m[1], effect: m[2], value: v[m[0]],
+      base: 'Base ' + (v[m[0]] - GEAR[m[0]]), gear: GEAR[m[0]] ? '+' + GEAR[m[0]] + ' gear' : '', gearFg: '#8FE3D8',
+      add: () => { if (this.state.unspent > 0) this.setState({ v: { ...v, [m[0]]: v[m[0]] + 1 }, unspent: s.unspent - 1 }); } }));
+    const cost = s.qty * 100, canBuy = cost <= s.essence;
+    return {
+      res, attrs, unspent: s.unspent, noUnspent,
+      unspentBg: noUnspent ? '#24304A' : 'rgba(79,193,181,.18)', unspentFg: noUnspent ? '#A2ABBD' : '#8FE3D8',
+      addBg: noUnspent ? 'transparent' : '#172137', addBorder: noUnspent ? '#24304A' : '#4FC1B5', addFg: noUnspent ? '#4A5570' : '#5CCFC1',
+      essenceStr: fmt(s.essence), qty: s.qty, ptWord: s.qty === 1 ? 'point' : 'points', qtyMin: s.qty <= 1,
+      costStr: fmt(cost), afterStr: fmt(s.essence - cost),
+      inc: () => this.setState({ qty: s.qty + 1 }),
+      dec: () => this.setState({ qty: Math.max(1, s.qty - 1) }),
+      buy: () => { if (canBuy) this.setState({ essence: s.essence - cost, unspent: s.unspent + s.qty }); },
+      restore: () => this.setState({ cur: { h: v.CON * 10, m: v.INT * 10, s: v.END * 10 } })
+    };
+  }
+}
+</script>
+</body>
+</html>

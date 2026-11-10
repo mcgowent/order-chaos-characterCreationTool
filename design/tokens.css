@@ -1,0 +1,81 @@
+/* Arcane Knight Character Creator — design tokens (from the approved design) */
+:root {
+  /* Grounds */
+  --ak-bg: #0B0F17;            /* page */
+  --ak-chrome: #0E1422;        /* top bar, wells, tiles inside panels */
+  --ak-surface: #121A2B;       /* panels, cards */
+  --ak-surface-hover: #151F33; /* card / row hover */
+  --ak-raised: #172137;        /* secondary buttons, filled slots */
+  --ak-raised-hover: #1F2B45;
+  --ak-inset: #0C1220;         /* editable fields */
+  --ak-disabled-bg: #101625;
+
+  /* Lines */
+  --ak-line: #24304A;          /* panel borders, disabled fill */
+  --ak-line-soft: #1E2840;     /* row dividers */
+  --ak-line-strong: #33415F;   /* input borders */
+  --ak-line-hover: #4A5A7E;    /* input hover */
+
+  /* Accents */
+  --ak-teal: #4FC1B5;          /* primary, focus, selection */
+  --ak-teal-hover: #6FD8CB;
+  --ak-teal-text: #5CCFC1;     /* links, classification */
+  --ak-teal-soft: #8FE3D8;     /* regen, calculated */
+  --ak-teal-halo: rgba(79, 193, 181, .20);
+  --ak-on-teal: #06201D;
+  --ak-gold: #C9A45C;          /* overlines, ornament, progression */
+  --ak-gold-light: #E2C98E;
+  --ak-gold-pale: #F1E3BF;
+  --ak-gold-dim: #8C7442;      /* featured frames, filled slots */
+
+  /* Text */
+  --ak-text-strong: #F2EFE8;
+  --ak-text: #E7E4DC;
+  --ak-text-2: #C9CFDB;        /* field labels, outline button text */
+  --ak-muted: #A2ABBD;
+  --ak-label: #8590A6;         /* small labels, helpers */
+  --ak-placeholder: #7F8AA0;
+  --ak-disabled-text: #5E6880;
+  --ak-disabled-icon: #4A5570;
+
+  /* Resources — always paired with a label + icon */
+  --ak-health: #E0525A;  --ak-health-track: rgba(224, 82, 90, .12);  --ak-health-tint: rgba(224, 82, 90, .18);
+  --ak-mana: #4C8EF0;    --ak-mana-track: rgba(76, 142, 240, .12);   --ak-mana-tint: rgba(76, 142, 240, .20);
+  --ak-stamina: #E9A23B; --ak-stamina-track: rgba(233, 162, 59, .12); --ak-stamina-tint: rgba(233, 162, 59, .20);
+  --ak-warning: #E9A23B;
+
+  /* Type */
+  --ak-font-display: 'Cinzel', Georgia, serif;
+  --ak-font-ui: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ak-fs-display: 38px;   /* page titles; sheet name 34px */
+  --ak-fs-section: 20px;   /* panel titles (Cinzel 600) */
+  --ak-fs-body: 15px;
+  --ak-fs-label: 13px;     /* field labels (Inter 600) */
+  --ak-fs-overline: 12px;  /* Inter 600, uppercase, letter-spacing .14em */
+  --ak-fs-small: 12px;
+  --ak-fs-stat-hero: 44px; /* Cinzel 700 */
+  --ak-fs-stat: 24px;      /* Inter 700 tabular */
+
+  /* Shape & spacing */
+  --ak-radius-control: 8px;
+  --ak-radius-tile: 10px;
+  --ak-radius-panel: 12px;
+  --ak-radius-pill: 999px;
+  --ak-gap-sm: 8px; --ak-gap: 12px; --ak-gap-md: 16px; --ak-gap-lg: 20px; --ak-gap-xl: 28px;
+  --ak-panel-pad: 20px 24px;
+  --ak-control-h: 48px;    /* text inputs, primary CTAs */
+  --ak-touch: 44px;
+  --ak-content-max: 1240px; /* sheet; library/creation use 1280px */
+
+  /* Effects (keep subtle) */
+  --ak-focus-ring: 2px solid var(--ak-teal-text);
+  --ak-focus-offset: 2px;
+  --ak-input-focus: 0 0 0 3px var(--ak-teal-halo);
+  --ak-glow-primary: 0 0 22px rgba(79, 193, 181, .25);
+  --ak-frame-featured: 0 0 0 1px rgba(201, 164, 92, .12), 0 0 48px rgba(79, 193, 181, .05);
+  --ak-card-hover: 0 0 0 1px rgba(201, 164, 92, .25), 0 8px 28px rgba(0, 0, 0, .35);
+}
+
+body { margin: 0; background: var(--ak-bg); color: var(--ak-text); font-family: var(--ak-font-ui); font-size: var(--ak-fs-body); line-height: 1.5; }
+:focus-visible { outline: var(--ak-focus-ring); outline-offset: var(--ak-focus-offset); }
+::placeholder { color: var(--ak-placeholder); }

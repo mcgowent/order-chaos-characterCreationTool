@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Style Reference</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#0B0F17}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1960px; overflow: hidden; background: #0B0F17; color: #E7E4DC; font-family: Inter, system-ui, sans-serif; font-size: 15px; line-height: 1.5; padding: 56px 64px; display: flex; flex-direction: column; gap: 36px">
+
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding-bottom: 20px; border-bottom: 1px solid rgba(201,164,92,.3)">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #C9A45C">Arcane Knight Character Creator</span>
+<h1 style="margin: 0; font-family: Cinzel, serif; font-weight: 600; font-size: 40px; line-height: 1.1; color: #F2EFE8">Style Reference</h1>
+</div>
+<p style="margin: 0; max-width: 520px; color: #A2ABBD; font-size: 14px">Dark charcoal and navy grounds, restrained teal for interaction, antique gold for structure. Resource colors are always paired with a text label and an icon or swatch.</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px">
+
+<section aria-labelledby="g-color" style="display: flex; flex-direction: column; gap: 14px">
+<h2 id="g-color" style="margin: 0; font-family: Cinzel, serif; font-weight: 600; font-size: 22px; color: #F2EFE8">Color</h2>
+<sc-for list="{{palette}}" as="grp" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #8590A6">{{grp.label}}</span>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px">
+<sc-for list="{{grp.items}}" as="c" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column; border: 1px solid #24304A; border-radius: 8px; overflow: hidden; background: #121A2B">
+<span style="height: 52px; background: {{c.hex}}; border-bottom: 1px solid #24304A"></span>
+<span style="padding: 8px 10px; display: flex; flex-direction: column; line-height: 1.3"><span style="font-size: 13px; font-weight: 600; color: #E7E4DC">{{c.name}}</span><span style="font-size: 12px; color: #A2ABBD; font-family: ui-monospace, Menlo, monospace">{{c.hex}}</span><span style="font-size: 11px; color: #8590A6">{{c.use}}</span></span>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</section>
+
+<section aria-labelledby="g-type" style="display: flex; flex-direction: column; gap: 14px">
+<h2 id="g-type" style="margin: 0; font-family: Cinzel, serif; font-weight: 600; font-size: 22px; color: #F2EFE8">Typography</h2>
+<p style="margin: 0; font-size: 13px; color: #A2ABBD">Cinzel for display and section titles only. Inter for every field, label and number; numbers use tabular figures so columns line up.</p>
+<div style="background: #121A2B; border: 1px solid #24304A; border-radius: 12px; padding: 8px 20px; display: flex; flex-direction: column">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid #1E2840"><span style="font-family: Cinzel, serif; font-weight: 600; font-size: 38px; line-height: 1.1; color: #F2EFE8">Caldor Miles</span><span style="font-size: 12px; color: #8590A6; white-space: nowrap">Display · Cinzel 600 · 34–40</span></div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid #1E2840"><span style="font-family: Cinzel, serif; font-weight: 600; font-size: 20px; color: #F2EFE8">Resources</span><span style="font-size: 12px; color: #8590A6">Section · Cinzel 600 · 18–22</span></div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid #1E2840"><span style="font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #C9A45C">Available Essence</span><span style="font-size: 12px; color: #8590A6">Overline · Inter 600 · 12 · +14% tracking</span></div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid #1E2840"><span style="font-size: 13px; font-weight: 600; color: #C9CFDB">Classification</span><span style="font-size: 12px; color: #8590A6">Field label · Inter 600 · 13</span></div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid #1E2840"><span style="font-size: 15px; color: #E7E4DC">Each attribute rolls a whole number from 10 to 15.</span><span style="font-size: 12px; color: #8590A6; white-space: nowrap">Body · Inter 400 · 15</span></div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid #1E2840"><span style="font-size: 13px; color: #8590A6">Free text — enter any species.</span><span style="font-size: 12px; color: #8590A6">Helper · Inter 400 · 12–13</span></div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0"><span style="display: flex; gap: 24px; align-items: baseline"><span style="font-family: Cinzel, serif; font-weight: 700; font-size: 44px; line-height: 1; color: #F2EFE8">5</span><span style="font-size: 28px; font-weight: 700; color: #F2EFE8; font-variant-numeric: tabular-nums">93,001</span><span style="font-size: 16px; font-weight: 700; color: #F2EFE8; font-variant-numeric: tabular-nums">295 / 310</span></span><span style="font-size: 12px; color: #8590A6">Numbers · Cinzel (hero) / Inter 700 tabular</span></div>
+</div>
+</section>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px">
+<section aria-labelledby="g-btn" style="display: flex; flex-direction: column; gap: 14px">
+<h2 id="g-btn" style="margin: 0; font-family: Cinzel, serif; font-weight: 600; font-size: 22px; color: #F2EFE8">Buttons</h2>
+<div style="background: #121A2B; border: 1px solid #24304A; border-radius: 12px; padding: 20px; display: grid; grid-template-columns: 110px repeat(4, minmax(0, 1fr)); gap: 14px 12px; align-items: center">
+<span></span>
+<sc-for list="{{states}}" as="st" hint-placeholder-count="4"><span style="font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #8590A6">{{st}}</span></sc-for>
+<sc-for list="{{buttons}}" as="b" hint-placeholder-count="4">
+<span style="font-size: 13px; font-weight: 600; color: #C9CFDB">{{b.kind}}</span>
+<sc-for list="{{b.cells}}" as="x" hint-placeholder-count="4">
+<button type="button" disabled="{{x.disabled}}" style="min-height: 44px; padding: 0 12px; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 600; background: {{x.bg}}; color: {{x.fg}}; border: 1px solid {{x.bd}}; box-shadow: {{x.sh}}; outline: {{x.ol}}; outline-offset: 2px">{{b.label}}</button>
+</sc-for>
+</sc-for>
+</div>
+<p style="margin: 0; font-size: 13px; color: #8590A6">Primary (teal) is used once per view for the main action. Secondary (gold) for character progression actions such as Roll or Advance Level. Focus is always a 2px teal ring offset 2px.</p>
+</section>
+
+<section aria-labelledby="g-inp" style="display: flex; flex-direction: column; gap: 14px">
+<h2 id="g-inp" style="margin: 0; font-family: Cinzel, serif; font-weight: 600; font-size: 22px; color: #F2EFE8">Inputs &amp; values</h2>
+<div style="background: #121A2B; border: 1px solid #24304A; border-radius: 12px; padding: 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 20px">
+<sc-for list="{{inputs}}" as="i" hint-placeholder-count="6">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #8590A6">{{i.state}}</span>
+<span style="height: 48px; padding: 0 14px; display: flex; align-items: center; justify-content: space-between; border-radius: 8px; background: {{i.bg}}; border: 1px {{i.bstyle}} {{i.bd}}; box-shadow: {{i.sh}}; color: {{i.fg}}; font-size: 16px; font-weight: {{i.fw}}">{{i.text}}<span style="font-family: Georgia, serif; font-style: italic; color: #8FE3D8; font-size: 14px">{{i.tag}}</span></span>
+<span style="font-size: 12px; color: #8590A6">{{i.note}}</span>
+</div>
+</sc-for>
+</div>
+</section>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px">
+<section aria-labelledby="g-stat" style="display: flex; flex-direction: column; gap: 14px">
+<h2 id="g-stat" style="margin: 0; font-family: Cinzel, serif; font-weight: 600; font-size: 22px; color: #F2EFE8">Stat cards &amp; attribute rows</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+<div style="background: #121A2B; border: 1px solid #24304A; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 600; letter-spacing: .14em; color: #C9A45C">LEVEL</span><span style="font-family: Cinzel, serif; font-weight: 700; font-size: 40px; line-height: 1; color: #F2EFE8">5</span><span style="font-size: 12px; color: #8590A6">5,400 Essence to Level 6</span></div>
+<div style="background: #121A2B; border: 1px solid #24304A; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 600; letter-spacing: .14em; color: #C9A45C">REPUTATION</span><span style="font-size: 22px; font-weight: 700; color: #F2EFE8">Rank 2 · 6%</span><span style="height: 8px; border-radius: 4px; background: #24304A; overflow: hidden; display: block"><span style="display: block; width: 6%; height: 100%; background: #C9A45C"></span></span></div>
+<div style="background: #121A2B; border: 1px dashed #33415F; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 600; letter-spacing: .14em; color: #8590A6">PLACEHOLDER</span><span style="font-size: 15px; font-weight: 600; color: #A2ABBD">To be defined</span><span style="font-size: 12px; color: #8590A6">Dashed border marks rules not yet specified</span></div>
+</div>
+<div style="background: #121A2B; border: 1px solid #24304A; border-radius: 12px; padding: 8px 12px; display: flex; flex-direction: column">
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="4">
+<div style="display: flex; align-items: center; gap: 14px; padding: 10px 8px; border-radius: 6px; background: {{r.bg}}; box-shadow: {{r.sh}}">
+<span style="width: 92px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #8590A6">{{r.state}}</span>
+<span style="width: 40px; font-size: 11px; font-weight: 700; letter-spacing: .1em; color: #C9A45C">{{r.abbr}}</span>
+<span style="flex: 1; display: flex; flex-direction: column; line-height: 1.3"><span style="font-weight: 600; color: #E7E4DC">{{r.name}}</span><span style="font-size: 12px; color: #8590A6">{{r.effect}}</span></span>
+<span style="font-size: 24px; font-weight: 700; color: #F2EFE8; font-variant-numeric: tabular-nums">{{r.value}}</span>
+<span style="width: 36px; height: 36px; display: grid; place-items: center; border-radius: 8px; background: {{r.btnBg}}; border: 1px solid {{r.btnBd}}; color: {{r.btnFg}}; font-size: 18px; font-weight: 600">+</span>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section aria-labelledby="g-bar" style="display: flex; flex-direction: column; gap: 14px">
+<h2 id="g-bar" style="margin: 0; font-family: Cinzel, serif; font-weight: 600; font-size: 22px; color: #F2EFE8">Resource bars</h2>
+<div style="background: #121A2B; border: 1px solid #24304A; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 18px">
+<sc-for list="{{bars}}" as="b" hint-placeholder-count="5">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
+<span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: #F2EFE8"><span style="width: 10px; height: 10px; border-radius: 2px; background: {{b.color}}"></span>{{b.name}}<span style="font-weight: 400; font-size: 12px; color: #8590A6">{{b.note}}</span></span>
+<span style="font-variant-numeric: tabular-nums"><strong style="color: #F2EFE8">{{b.cur}}</strong><span style="color: #8590A6"> / {{b.max}}</span><span style="margin-left: 12px; font-size: 13px; font-weight: 700; color: #8FE3D8">+{{b.regen}} / min</span></span>
+</div>
+<span style="display: block; height: 14px; border-radius: 7px; background: {{b.track}}; overflow: hidden"><span style="display: block; width: {{b.pct}}; height: 100%; background: {{b.color}}; border-radius: 7px"></span></span>
+</div>
+</sc-for>
+<p style="margin: 0; font-size: 12px; color: #8590A6">Bar height 14px (12px on phone). Track is the resource hue at 12–14% opacity. Label, exact current / max and regeneration always accompany the bar.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: #8FE3D8; padding: 4px 10px; border: 1px solid rgba(79,193,181,.35); border-radius: 999px"><span style="font-family: Georgia, serif; font-style: italic; text-transform: none">ƒ</span>Calculated</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: #C9CFDB; padding: 4px 10px; background: #0C1220; border: 1px solid #4A5A7E; border-radius: 999px">Editable</span>
+<span style="font-size: 12px; color: #8590A6; padding: 4px 10px; border: 1px dashed #33415F; border-radius: 999px">To be defined</span>
+<span style="font-size: 12px; font-weight: 700; color: #8FE3D8; padding: 4px 10px; background: rgba(79,193,181,.18); border-radius: 999px">2 unspent</span>
+<span style="font-size: 12px; font-weight: 700; color: #A2ABBD; padding: 4px 10px; background: #24304A; border-radius: 999px">0 unspent</span>
+</div>
+</section>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1960}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const palette = [
+      { label: 'Grounds', items: [
+        { name: 'Night', hex: '#0B0F17', use: 'Page background' }, { name: 'Chrome', hex: '#0E1422', use: 'Top bar, wells' },
+        { name: 'Surface', hex: '#121A2B', use: 'Panels, cards' }, { name: 'Raised', hex: '#172137', use: 'Secondary buttons' } ] },
+      { label: 'Lines & inputs', items: [
+        { name: 'Inset', hex: '#0C1220', use: 'Editable fields' }, { name: 'Border', hex: '#24304A', use: 'Panel edges' },
+        { name: 'Border strong', hex: '#33415F', use: 'Input edges' }, { name: 'Gold dim', hex: '#8C7442', use: 'Featured frames' } ] },
+      { label: 'Accent & text', items: [
+        { name: 'Arcane teal', hex: '#4FC1B5', use: 'Primary, focus' }, { name: 'Antique gold', hex: '#C9A45C', use: 'Overlines, ornament' },
+        { name: 'Text', hex: '#E7E4DC', use: 'Body, values' }, { name: 'Muted', hex: '#A2ABBD', use: 'Secondary text' } ] },
+      { label: 'Resources', items: [
+        { name: 'Health', hex: '#E0525A', use: 'Always labeled' }, { name: 'Mana', hex: '#4C8EF0', use: 'Always labeled' },
+        { name: 'Stamina', hex: '#E9A23B', use: 'Always labeled' }, { name: 'Regen', hex: '#8FE3D8', use: '+ per minute' } ] }
+    ];
+    const ring = '2px solid #5CCFC1', none = 'none', no = '0px solid transparent';
+    const mk = (d, h, f, x) => [d, h, f, x];
+    const buttons = [
+      { kind: 'Primary', label: 'Create', cells: mk(
+        { bg: '#4FC1B5', fg: '#06201D', bd: '#4FC1B5', sh: '0 0 18px rgba(79,193,181,.25)', ol: no },
+        { bg: '#6FD8CB', fg: '#06201D', bd: '#6FD8CB', sh: '0 0 22px rgba(79,193,181,.35)', ol: no },
+        { bg: '#4FC1B5', fg: '#06201D', bd: '#4FC1B5', sh: none, ol: ring },
+        { bg: '#24304A', fg: '#7F8AA0', bd: '#24304A', sh: none, ol: no, disabled: true }) },
+      { kind: 'Secondary', label: 'Roll', cells: mk(
+        { bg: '#172137', fg: '#E2C98E', bd: '#8C7442', sh: none, ol: no },
+        { bg: '#1F2B45', fg: '#F1E3BF', bd: '#C9A45C', sh: none, ol: no },
+        { bg: '#172137', fg: '#E2C98E', bd: '#8C7442', sh: none, ol: ring },
+        { bg: '#121A2B', fg: '#5E6880', bd: '#24304A', sh: none, ol: no, disabled: true }) },
+      { kind: 'Outline', label: 'Edit', cells: mk(
+        { bg: 'transparent', fg: '#C9CFDB', bd: '#33415F', sh: none, ol: no },
+        { bg: 'transparent', fg: '#F1E3BF', bd: '#C9A45C', sh: none, ol: no },
+        { bg: 'transparent', fg: '#C9CFDB', bd: '#33415F', sh: none, ol: ring },
+        { bg: 'transparent', fg: '#5E6880', bd: '#24304A', sh: none, ol: no, disabled: true }) },
+      { kind: 'Ghost', label: 'Cancel', cells: mk(
+        { bg: 'transparent', fg: '#A2ABBD', bd: 'transparent', sh: none, ol: no },
+        { bg: '#172137', fg: '#E7E4DC', bd: '#172137', sh: none, ol: no },
+        { bg: 'transparent', fg: '#A2ABBD', bd: 'transparent', sh: none, ol: ring },
+        { bg: 'transparent', fg: '#5E6880', bd: 'transparent', sh: none, ol: no, disabled: true }) }
+    ].map(b => ({ ...b, cells: b.cells.map(c => ({ disabled: false, ...c })) }));
+    const inputs = [
+      { state: 'Default', text: 'Arcane Knight', bg: '#0C1220', bd: '#33415F', bstyle: 'solid', sh: 'none', fg: '#F2EFE8', fw: 400, tag: '', note: 'Free-text classification' },
+      { state: 'Hover', text: 'Arcane Knight', bg: '#0C1220', bd: '#4A5A7E', bstyle: 'solid', sh: 'none', fg: '#F2EFE8', fw: 400, tag: '', note: 'Border lightens' },
+      { state: 'Focus', text: 'Half-Elven Tidecaller', bg: '#0C1220', bd: '#4FC1B5', bstyle: 'solid', sh: '0 0 0 3px rgba(79,193,181,.2)', fg: '#F2EFE8', fw: 400, tag: '', note: 'Teal border + soft halo' },
+      { state: 'Placeholder', text: 'e.g. Human, Sylvari', bg: '#0C1220', bd: '#33415F', bstyle: 'solid', sh: 'none', fg: '#7F8AA0', fw: 400, tag: '', note: 'Example text, not a choice list' },
+      { state: 'Disabled', text: 'Level 1', bg: '#101625', bd: '#1E2840', bstyle: 'solid', sh: 'none', fg: '#5E6880', fw: 400, tag: '', note: 'Locked during creation' },
+      { state: 'Calculated (read-only)', text: '430', bg: 'transparent', bd: 'rgba(79,193,181,.35)', bstyle: 'dashed', sh: 'none', fg: '#C9CFDB', fw: 700, tag: 'ƒ', note: 'No field chrome; derived from attributes' }
+    ];
+    const rows = [
+      { state: 'Default', abbr: 'CON', name: 'Constitution', effect: 'Max Health ×10 · Health regen', value: 43, bg: 'transparent', sh: 'none', btnBg: '#172137', btnBd: '#4FC1B5', btnFg: '#5CCFC1' },
+      { state: 'Hover', abbr: 'INT', name: 'Intellect', effect: 'Max Mana ×10 · Mana regen', value: 37, bg: '#151F33', sh: 'none', btnBg: '#1F2B45', btnBd: '#4FC1B5', btnFg: '#8FE3D8' },
+      { state: 'Selected', abbr: 'CNC', name: 'Concentration', effect: 'Adds to Mana regen', value: 29, bg: 'rgba(79,193,181,.1)', sh: 'inset 0 0 0 1px rgba(79,193,181,.45)', btnBg: '#172137', btnBd: '#4FC1B5', btnFg: '#5CCFC1' },
+      { state: 'Disabled +', abbr: 'STR', name: 'Strength', effect: 'Story-driven', value: 44, bg: 'transparent', sh: 'none', btnBg: 'transparent', btnBd: '#24304A', btnFg: '#4A5570' }
+    ];
+    const bars = [
+      { name: 'Health', note: 'full', color: '#E0525A', track: 'rgba(224,82,90,.14)', cur: 430, max: 430, pct: '100%', regen: 43 },
+      { name: 'Mana', note: 'full', color: '#4C8EF0', track: 'rgba(76,142,240,.14)', cur: 370, max: 370, pct: '100%', regen: 65 },
+      { name: 'Stamina', note: 'partial', color: '#E9A23B', track: 'rgba(233,162,59,.14)', cur: 295, max: 310, pct: '95.2%', regen: 31 },
+      { name: 'Health', note: 'low', color: '#E0525A', track: 'rgba(224,82,90,.14)', cur: 86, max: 430, pct: '20%', regen: 43 },
+      { name: 'Mana', note: 'empty', color: '#4C8EF0', track: 'rgba(76,142,240,.14)', cur: 0, max: 370, pct: '0%', regen: 65 }
+    ];
+    return { palette, buttons, states: ['Default', 'Hover', 'Focus', 'Disabled'], inputs, rows, bars };
+  }
+}
+</script>
+</body>
+</html>

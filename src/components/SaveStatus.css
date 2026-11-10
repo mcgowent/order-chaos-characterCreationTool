@@ -1,0 +1,4 @@
+.save-status { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; }
+.save-status--ok { color: var(--ak-teal-soft); }
+.save-status--pending { color: var(--ak-label); }
+.save-status--warn { color: var(--ak-warning); }

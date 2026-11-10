@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "characters": [
+    {
+      "id": "c-caldor",
+      "name": "Caldor Miles",
+      "classification": "Arcane Knight",
+      "species": "Human",
+      "level": 5,
+      "essence": 93001,
+      "reputation": {
+        "rank": 2,
+        "progress": 6
+      },
+      "baseAttributes": {
+        "constitution": 39,
+        "intellect": 33,
+        "endurance": 29,
+        "core": 20,
+        "concentration": 25,
+        "strength": 39
+      },
+      "unspentPoints": 0,
+      "current": {
+        "health": 430,
+        "mana": 370,
+        "stamina": 295
+      },
+      "equipment": {
+        "head": {
+          "name": "Helm of the Vigil Ward",
+          "bonuses": {
+            "constitution": 2,
+            "intellect": 1
+          }
+        },
+        "neck": {
+          "name": "Pendant of Quiet Tides",
+          "bonuses": {
+            "concentration": 2
+          }
+        },
+        "back": {
+          "name": "Cloak of Ember Ash",
+          "bonuses": {
+            "endurance": 1
+          }
+        },
+        "chest": {
+          "name": "Runeforged Breastplate",
+          "bonuses": {
+            "constitution": 2,
+            "strength": 2
+          }
+        },
+        "hands": {
+          "name": "Gauntlets of the Oathbound",
+          "bonuses": {
+            "strength": 1
+          }
+        },
+        "legs": {
+          "name": "Wardstone Greaves",
+          "bonuses": {
+            "endurance": 1
+          }
+        },
+        "leftRing1": {
+          "name": "Band of Seven Sigils",
+          "bonuses": {
+            "intellect": 2
+          }
+        },
+        "rightRing1": {
+          "name": "Signet of House Miles",
+          "bonuses": {
+            "core": 1
+          }
+        },
+        "trinket1": {
+          "name": "Shard of the First Rune",
+          "bonuses": {
+            "intellect": 1,
+            "concentration": 1
+          }
+        },
+        "mainHand": {
+          "name": "Arcane Longsword",
+          "bonuses": {
+            "strength": 2
+          }
+        }
+      },
+      "createdAt": "2026-09-01T12:00:00.000Z",
+      "updatedAt": "2026-11-09T15:42:00.000Z"
+    },
+    {
+      "id": "c-seraphine",
+      "name": "Seraphine Ashvale-Corrigan",
+      "classification": "Stormbound Cartographer of the Outer Reaches",
+      "species": "Half-Elven Tidecaller",
+      "level": 3,
+      "essence": 1250,
+      "reputation": {
+        "rank": 1,
+        "progress": 40
+      },
+      "baseAttributes": {
+        "constitution": 13,
+        "intellect": 18,
+        "endurance": 12,
+        "core": 14,
+        "concentration": 17,
+        "strength": 10
+      },
+      "unspentPoints": 0,
+      "current": {
+        "health": 130,
+        "mana": 190,
+        "stamina": 120
+      },
+      "equipment": {
+        "neck": {
+          "name": "Compass of the Drowned Coast",
+          "bonuses": {
+            "intellect": 1
+          }
+        }
+      },
+      "createdAt": "2026-09-01T12:00:00.000Z",
+      "updatedAt": "2026-11-08T19:10:00.000Z"
+    },
+    {
+      "id": "c-oswin",
+      "name": "Oswin Thale",
+      "classification": "Warden of the Ember Gate",
+      "species": "Dwarf",
+      "level": 8,
+      "essence": 4200,
+      "reputation": {
+        "rank": 3,
+        "progress": 55
+      },
+      "baseAttributes": {
+        "constitution": 26,
+        "intellect": 14,
+        "endurance": 22,
+        "core": 18,
+        "concentration": 15,
+        "strength": 24
+      },
+      "unspentPoints": 2,
+      "current": {
+        "health": 280,
+        "mana": 140,
+        "stamina": 220
+      },
+      "equipment": {
+        "chest": {
+          "name": "Emberforged Hauberk",
+          "bonuses": {
+            "constitution": 2
+          }
+        },
+        "mainHand": {
+          "name": "Gatekeeper's Hammer",
+          "bonuses": {
+            "strength": 2
+          }
+        }
+      },
+      "createdAt": "2026-09-01T12:00:00.000Z",
+      "updatedAt": "2026-11-04T16:00:00.000Z"
+    },
+    {
+      "id": "c-kestra",
+      "name": "Kestra Dunmere",
+      "classification": "Spellblade",
+      "species": "Human",
+      "level": 1,
+      "essence": 0,
+      "reputation": {
+        "rank": 1,
+        "progress": 0
+      },
+      "baseAttributes": {
+        "constitution": 13,
+        "intellect": 14,
+        "endurance": 11,
+        "core": 12,
+        "concentration": 15,
+        "strength": 10
+      },
+      "unspentPoints": 0,
+      "current": {
+        "health": 130,
+        "mana": 140,
+        "stamina": 110
+      },
+      "equipment": {},
+      "createdAt": "2026-09-01T12:00:00.000Z",
+      "updatedAt": "2026-11-02T16:00:00.000Z"
+    },
+    {
+      "id": "c-ilyth",
+      "name": "Ilyth of the Quiet Vale",
+      "classification": "Rune Archivist",
+      "species": "Sylvari",
+      "level": 12,
+      "essence": 15800,
+      "reputation": {
+        "rank": 4,
+        "progress": 20
+      },
+      "baseAttributes": {
+        "constitution": 22,
+        "intellect": 41,
+        "endurance": 20,
+        "core": 25,
+        "concentration": 38,
+        "strength": 14
+      },
+      "unspentPoints": 0,
+      "current": {
+        "health": 220,
+        "mana": 430,
+        "stamina": 200
+      },
+      "equipment": {
+        "trinket1": {
+          "name": "Index of Lost Glyphs",
+          "bonuses": {
+            "intellect": 2,
+            "concentration": 2
+          }
+        }
+      },
+      "createdAt": "2026-09-01T12:00:00.000Z",
+      "updatedAt": "2026-10-28T16:00:00.000Z"
+    },
+    {
+      "id": "c-torv",
+      "name": "Torv Ashgrin",
+      "classification": "Ember Sentinel",
+      "species": "Ogrekin",
+      "level": 4,
+      "essence": 600,
+      "reputation": {
+        "rank": 1,
+        "progress": 75
+      },
+      "baseAttributes": {
+        "constitution": 24,
+        "intellect": 11,
+        "endurance": 21,
+        "core": 15,
+        "concentration": 12,
+        "strength": 26
+      },
+      "unspentPoints": 0,
+      "current": {
+        "health": 240,
+        "mana": 110,
+        "stamina": 210
+      },
+      "equipment": {},
+      "createdAt": "2026-09-01T12:00:00.000Z",
+      "updatedAt": "2026-10-19T16:00:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+.topbar { background: var(--ak-chrome); border-bottom: 1px solid rgba(201, 164, 92, .28); }
+.topbar__inner {
+  max-width: 1280px; margin: 0 auto; padding: 0 24px; min-height: 64px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px;
+}
+.topbar__brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ak-text); }
+.topbar__brand:hover { color: var(--ak-text); }
+.topbar__brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+.topbar__title { font-family: var(--ak-font-display); font-weight: 700; font-size: 16px; letter-spacing: .14em; color: var(--ak-gold-light); }
+.topbar__sub { font-size: 12px; color: var(--ak-muted); letter-spacing: .04em; }
+.topbar__nav { display: flex; gap: 4px; flex-wrap: wrap; flex: 1 1 auto; }
+.topbar__link {
+  padding: 20px 12px 18px; color: var(--ak-muted); text-decoration: none; font-weight: 500; font-size: 14px;
+  border-bottom: 2px solid transparent;
+}
+.topbar__link:hover { color: var(--ak-text); }
+.topbar__link.is-active { color: var(--ak-text); font-weight: 600; border-bottom-color: var(--ak-teal); }
+.topbar__author { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ak-muted); }
+.topbar__avatar {
+  width: 34px; height: 34px; border-radius: 50%; background: var(--ak-raised); border: 1px solid var(--ak-line-strong);
+  display: grid; place-items: center; font-weight: 600; color: var(--ak-gold-light);
+}
+
+@media (max-width: 720px) {
+  .topbar__inner { padding: 0 16px; gap: 0 16px; }
+  .topbar__brand { padding: 10px 0; }
+  .topbar__author-label { display: none; }
+  .topbar__author { margin-left: auto; }
+  .topbar__nav { order: 3; flex-basis: 100%; margin: 0 -12px; }
+  .topbar__link { padding: 10px 12px 10px; }
+  /* Sheet and Equipment use their own compact bar on phones. */
+  .topbar--compact-on-phone { display: none; }
+}
